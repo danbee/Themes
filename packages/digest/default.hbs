@@ -13,7 +13,15 @@
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{plural pagination.pages empty="" singular=" no-pagination" plural=""}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
+<body class="
+  {{body_class}}{{plural pagination.pages empty="" singular=" no-pagination" plural=""}}
+  {{#match @custom.title_font "=" "Modern sans-serif"}} has-sans-title{{/match}}
+  {{#match @custom.body_font "=" "Modern sans-serif"}} has-sans-body{{/match}}
+  {{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}
+  {{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}
+  {{#match @custom.title_font "=" "Typewriter"}} has-mono-title{{/match}}
+  {{#match @custom.body_font "=" "Typewriter"}} has-mono-body{{/match}}
+">
     <div class="gh-site">
         <header id="gh-head" class="gh-head gh-outer">
             <div class="gh-head-inner">
