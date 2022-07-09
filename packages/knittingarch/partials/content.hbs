@@ -8,7 +8,13 @@
         </div>
     {{/is}}
 
-    <h1 class="gh-article-title">{{title}}</h1>
+    {{#if home}}
+        <a class="gh-card-link" href="{{url}}">
+            <h1 class="gh-article-title">{{title}}</h1>
+        </a>
+    {{else}}
+        <h1 class="gh-article-title">{{title}}</h1>
+    {{/if}}
 
     {{#if custom_excerpt}}
         <p class="gh-article-excerpt">{{custom_excerpt}}</p>
