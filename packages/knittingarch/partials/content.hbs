@@ -15,13 +15,9 @@
 
         {{#get "tags" limit="all"}}
             {{#if tags}}
-                <a class="gh-tag-link" href="{{url}}">
-                    <p class="gh-tag-name">
-                        {{#foreach tags}}
-                            {{this}}
-                        {{/foreach}}
-                    </p>
-                </a>
+                {{#foreach tags}}
+                    {{< tag}}
+                {{/foreach}}
             {{/if}}
         {{/get}}
     {{/is}}
