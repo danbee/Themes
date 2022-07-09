@@ -87,6 +87,10 @@ body {
     background-color: var(--ghost-accent-color);
 }
 
+.accent-color {
+    background-color: var(--ghost-accent-color);
+}
+
 .gh-page-feed {
     margin-top: 3rem;
 }
