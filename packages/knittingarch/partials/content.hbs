@@ -11,7 +11,9 @@
         </a>
     {{/is}}
 
-    <h1 class="gh-article-title">{{title}}</h1>
+    {{#unless home}}
+        <h1 class="gh-article-title">{{title}}</h1>
+    {{/unless}}
 
     {{#if custom_excerpt}}
         <p class="gh-article-excerpt">{{custom_excerpt}}</p>
