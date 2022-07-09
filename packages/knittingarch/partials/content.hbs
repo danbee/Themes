@@ -16,7 +16,7 @@
         {{#get "tags" limit="all"}}
             {{#if tags}}
                 {{#foreach tags}}
-                    {{< tag}}
+                    {{> tag}}
                 {{/foreach}}
             {{/if}}
         {{/get}}
