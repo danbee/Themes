@@ -88,7 +88,7 @@ body {
 }
 
 .accent-color {
-    background-color: var(--ghost-accent-color);
+    color: var(--ghost-accent-color);
 }
 
 .gh-page-feed {
