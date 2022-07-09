@@ -14,7 +14,9 @@
         {{/is}}
     {{/is}}
 
-    <h1 class="gh-article-title">{{title}}</h1>
+    {{#is post}}
+        <h1 class="gh-article-title">{{title}}</h1>
+    {{/is}}
 
     {{#if custom_excerpt}}
         <p class="gh-article-excerpt">{{custom_excerpt}}</p>
