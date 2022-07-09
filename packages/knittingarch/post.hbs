@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{#post}}
+
+<main id="gh-main" class="gh-main">
+    <article class="gh-article {{post_class}}">
+        {{> content}}
+    </article>
+
+    {{#get "posts" filter="tag:{{slug}}" limit="all"}}
+        {{#if posts}}
+            <div class="gh-feed gh-page-feed gh-canvas">
+                {{#foreach posts}}
+                    {{> loop}}
+                {{/foreach}}
+            </div>
+        {{/if}}
+    {{/get}}
+</main>
+
+{{/post}}
