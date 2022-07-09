@@ -6,15 +6,12 @@
             {{/is}}
             <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
         </div>
-    {{/is}}
-
-    {{#if home}}
         <a class="gh-card-link" href="{{url}}">
             <h1 class="gh-article-title">{{title}}</h1>
         </a>
-    {{else}}
-        <h1 class="gh-article-title">{{title}}</h1>
-    {{/if}}
+    {{/is}}
+
+    <h1 class="gh-article-title">{{title}}</h1>
 
     {{#if custom_excerpt}}
         <p class="gh-article-excerpt">{{custom_excerpt}}</p>
