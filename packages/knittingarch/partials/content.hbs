@@ -12,6 +12,16 @@
                 <h1 class="gh-article-title">{{title}}</h1>
             </a>
         {{/is}}
+
+        {{#get "tags" limit="all"}}
+            {{#if tags}}
+                <div>
+                    {{#foreach tags}}
+                        {{> loop}}
+                    {{/foreach}}
+                </div>
+            {{/if}}
+        {{/get}}
     {{/is}}
 
     {{#is "page, post"}}
