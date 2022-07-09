@@ -372,6 +372,10 @@ body:not(.home-template) .gh-article-image {
     color: var(--ghost-accent-color);
 }
 
+.gh-tag-link:hover .gh-tag-name {
+    text-decoration: underline;
+}
+
 .gh-author-image {
     position: absolute;
     top: -64px;

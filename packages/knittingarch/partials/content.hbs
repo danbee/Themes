@@ -15,11 +15,13 @@
 
         {{#get "tags" limit="all"}}
             {{#if tags}}
-                <div>
-                    {{#foreach tags}}
-                        {{> loop}}
-                    {{/foreach}}
-                </div>
+                <a class="gh-tag-link" href="{{url}}">
+                    <p class="gh-tag-name">
+                        {{#foreach tags}}
+                            {{tag}}
+                        {{/foreach}}
+                    </p>
+                </a>
             {{/if}}
         {{/get}}
     {{/is}}
