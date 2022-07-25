@@ -11,19 +11,26 @@
             <a class="gh-card-link" href="{{url}}">
                 <h1 class="gh-article-title">{{title}}</h1>
             </a>
+            {{#get "tags" limit="1"}}
+                {{#if tags}}
+                    {{#foreach tags}}
+                        {{> new_tag}}
+                    {{/foreach}}
+                {{/if}}
+            {{/get}}
         {{/is}}
+    {{/is}}
 
-        {{#get "tags" limit="all"}}
+    {{#is "page, post"}}
+        <h1 class="gh-article-title accent-color">{{title}}</h1>
+
+        {{#get "tags" filter="post:{{tag}}" limit="all"}}
             {{#if tags}}
                 {{#foreach tags}}
                     {{> new_tag}}
                 {{/foreach}}
             {{/if}}
         {{/get}}
-    {{/is}}
-
-    {{#is "page, post"}}
-        <h1 class="gh-article-title accent-color">{{title}}</h1>
     {{/is}}
 
     {{#if custom_excerpt}}
