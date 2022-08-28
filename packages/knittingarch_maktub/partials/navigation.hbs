@@ -1,9 +1,9 @@
 <ul class="menu">
-	{{#foreach navigation visibility="all" to="4"}}
+	{{#foreach navigation visibility="all" to="5"}}
 		<li class="nav-{{slug}}{{#if current}} current-menu-item{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
 	{{/foreach}}    
 
-    {{#foreach navigation visibility="all" from="5" }}
+    {{#foreach navigation visibility="all" from="6" }}
         {{#if @first}}
         <li class="nav-more menu-item-has-children">
             <a href="javascript:void(0)">{{t "More"}}</a>
@@ -16,13 +16,15 @@
         {{/if}}
     {{/foreach}}
 
-    {{#if @member}}
-        {{#if @member.subscriptions}}
-            <li class="nav-account"><a href="{{@site.url}}/account" class="epcl-button dark bordered" data-title="{{t "My Account"}}">{{t "My Account"}}</a></li>
+    <!-- For if/when I have subscriptions available
+        {{#if @member}}
+            {{#if @member.subscriptions}}
+                <li class="nav-account"><a href="{{@site.url}}/account" class="epcl-button dark bordered" data-title="{{t "My Account"}}">{{t "My Account"}}</a></li>
+            {{/if}}
+            <li class="nav-logout"><a data-members-signout>{{t "Sign Out"}}</a></li>
+        {{else}}
+            <li class="nav-login"><a href="{{@site.url}}/signin" class="login epcl-button dark bordered" data-title="{{t "Sign In"}}">{{t "Sign In"}}</a></li>
         {{/if}}
-        {{!-- <li class="nav-logout"><a data-members-signout>{{t "Sign Out"}}</a></li> --}}
-    {{else}}
-        <li class="nav-login"><a href="{{@site.url}}/signin" class="login epcl-button dark bordered" data-title="{{t "Sign In"}}">{{t "Sign In"}}</a></li>      
-    {{/if}}
+    -->
 </ul>
 
