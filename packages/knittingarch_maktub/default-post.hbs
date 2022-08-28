@@ -35,9 +35,11 @@
                         </div>
                     {{else}}
                         <div class="post-style-text epcl-flex ctag-{{primary_tag.slug}}">
+                            <!-- TODO: Figure out how to make this less obtrusive 
                                 <div class="epcl-dropcap">
                                     <span class="first-letter" data-title="{{title}}"></span>
                                 </div>
+                            -->
                             <div class="info">    
                                 <h1 class="main-title title large">{{title}}</h1>
                                 <!-- start: .meta -->
@@ -62,6 +64,7 @@
                     {{/if}}
 
                     <div class="clear"></div>
+
 
                 </header>
 
@@ -103,11 +106,13 @@
             </article>
             <div class="clear"></div>
 
-            {{#primary_author}}
-                {{> author-box }}
-            {{/primary_author}}
+            {{!--
+                {{#primary_author}}
+                    {{> author-box }}
+                {{/primary_author}}
+            --}}
 
-            <div class="clear"></div>
+            <!-- <div class="clear"></div> -->
 
             {{#if @custom.disqus_shortname}}
                 <!-- start: disqus integration -->
@@ -145,10 +150,13 @@
                                         <span class="fullimage cover lazy" data-src="{{img_url feature_image size="thumbnail"}}"></span>
                                         <span class="fullimage cover lazy fake-layout" data-src="{{img_url feature_image size="thumbnail"}}"></span>
                                     </a>
+                                    <!-- TODO: Figure out how to make this less obtrusive -->
+                                    {{!--
                                     {{else}}
                                         <a class="epcl-dropcap large main-effect text-only" href="{{url}}">
                                             <span class="first-letter fake-layout" data-title="{{title}}"></span>
                                         </a>
+                                    --}}
                                     {{/if}}
                                     <div class="info">
                                         <h4 class="title small no-margin underline-effect"><a href="{{url}}">{{title}}</a></h4>
@@ -173,10 +181,13 @@
                             <div class="thumb epcl-dropcap epcl-loader">
                                 <span class="fullimage cover lazy" data-src="{{img_url feature_image size="thumbnail"}}"></span>
                             </div>
+                        <!-- TODO: Figure out how to make this less obtrusive -->
+                        {{!--
                         {{else}}
                             <div class="thumb epcl-dropcap">
                                 <span class="first-letter" data-title="{{title}}"></span>
                             </div>
+                        --}}
                         {{/if}}
                         <a href="{{url}}" class="full-link"></a>
                         <div class="info">
