@@ -16,13 +16,15 @@
         {{/if}}
     {{/foreach}}
 
-    {{#if @member}}
-        {{#if @member.subscriptions}}
-            <li class="nav-account"><a href="{{@site.url}}/account" class="epcl-button dark bordered" data-title="{{t "My Account"}}">{{t "My Account"}}</a></li>
+    <!-- For if/when I have subscriptions available
+        {{#if @member}}
+            {{#if @member.subscriptions}}
+                <li class="nav-account"><a href="{{@site.url}}/account" class="epcl-button dark bordered" data-title="{{t "My Account"}}">{{t "My Account"}}</a></li>
+            {{/if}}
+            <li class="nav-logout"><a data-members-signout>{{t "Sign Out"}}</a></li>
+        {{else}}
+            <li class="nav-login"><a href="{{@site.url}}/signin" class="login epcl-button dark bordered" data-title="{{t "Sign In"}}">{{t "Sign In"}}</a></li>
         {{/if}}
-        {{!-- <li class="nav-logout"><a data-members-signout>{{t "Sign Out"}}</a></li> --}}
-    {{else}}
-        <li class="nav-login"><a href="{{@site.url}}/signin" class="login epcl-button dark bordered" data-title="{{t "Sign In"}}">{{t "Sign In"}}</a></li>      
-    {{/if}}
+    -->
 </ul>
 
