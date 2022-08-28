@@ -15,9 +15,11 @@
                 <p class="success-message">{{t "Subscription was sent successfully, check your email"}} <i class="fa fa-envelope-o"></i></p>
             </form>
             
-            <div class="epcl-social-buttons fill-color">
-                {{> social-buttons}}
-            </div>
+            <!--
+                <div class="epcl-social-buttons fill-color">
+                    {{> social-buttons}}
+                </div>
+            -->
     
         </div>
     </div>
@@ -31,16 +33,19 @@
 
             {{> widgets/social-profiles }}
 
-            {{> widgets/about }}
+            <!-- TODO: link the `widgets/about` URL to the Who I Am page instead of going to a separate page with all the articles I wrote -->
+            {{!-- {{> widgets/about }} --}}
 
             <div class="clear"></div>
         </div>
 
 	</div>
 
-    {{> site-logo }}
+    <!--
+        {{> site-logo }}
+    -->
 
-	<p class="published border-effect">{{t "Published with" }} <a href="https://ghost.org/" target="_blank">Ghost</a></p>
+	<p class="published border-effect">{{t "Built with" }} <a href="https://ghost.org/" target="_blank">Ghost</a></p>
 
     <div class="clear"></div>
 
