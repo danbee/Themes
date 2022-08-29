@@ -141,7 +141,7 @@
             {{#get "posts" filter="id:-{{id}}+primary_tag:{{primary_tag.slug}}" limit="4" as |related-articles| }}
                 {{#if related-articles}}
                     <section class="related section" id="epcl-related-stories">
-                        <h3 class="title bordered">{{t "Related Articles"}}<span class="border"></span></h3>
+                        <h3 class="title bordered">{{t "Related Posts"}}<span class="border"></span></h3>
                         <div class="epcl-row">                        
                             {{#foreach related-articles visibility="all" columns="2"}}
                                 <article class="item grid-50 tablet-grid-50 mobile-grid-100 ctag-{{primary_tag.slug}} {{post_class}}">
@@ -174,7 +174,7 @@
             {{/get}}
 
             <section class="siblings section" id="epcl-other-stories">
-                <h3 class="title bordered">{{t "Other Stories"}}<span class="border"></span></h3>
+                <h3 class="title bordered">{{t "Other Posts"}}<span class="border"></span></h3>
                 {{#prev_post}}
                     <article class="prev bg-white">
                         {{#if feature_image}}
