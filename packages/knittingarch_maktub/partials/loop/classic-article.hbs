@@ -96,7 +96,7 @@
                 
         {{#if tags}}               
             <div class="tags">
-                {{#foreach tags visibility="public" limit="3"}}
+                {{#foreach tags visibility="public" limit="all"}}
                     <a href="{{url}}" class="ctag ctag-{{slug}}" data-id="ctag-{{slug}}">{{name}}</a>
                 {{/foreach}}
             </div>
