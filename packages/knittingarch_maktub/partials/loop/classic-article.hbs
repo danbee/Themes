@@ -15,7 +15,8 @@
                         {{/if}}           
                     </a>
                 <!-- TODO: Figure out how to make this less obtrusive -->
-                {{!-- {{else}}
+                {{!--
+                {{else}}
                     <a class="epcl-dropcap main-effect text-only" href="{{url}}">
                         <span class="first-letter fake-layout" data-title="{{title}}"></span>
                     </a>
@@ -95,12 +96,13 @@
                 
         {{#if tags}}               
             <div class="tags">
-                {{#foreach tags visibility="public" limit="3"}}
+                {{#foreach tags visibility="public" limit="all"}}
                     <a href="{{url}}" class="ctag ctag-{{slug}}" data-id="ctag-{{slug}}">{{name}}</a>
                 {{/foreach}}
             </div>
         {{/if}}         
         
+        <!--
         <div class="meta bottom">
             {{#foreach authors limit="1" }}
                 <a href="{{url}}" title="{{name}}" class="author meta-info hide-on-mobile">                                        
@@ -115,6 +117,7 @@
                 </a>
             {{/foreach}}
         </div>
+        -->
         
         <div class="clear"></div>
 

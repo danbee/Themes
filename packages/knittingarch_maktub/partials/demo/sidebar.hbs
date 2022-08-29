@@ -3,7 +3,7 @@
 
     <!-- start: .recent-articles -->
     <div class="widget widget_epcl_posts_thumbs grid-25 tablet-grid-50 mobile-grid-100">
-        <h4 class="widget-title title medium bordered"><span class="bg">{{t "Latest Articles" }}</span><span class="border"></span></h4>
+        <h4 class="widget-title title medium bordered"><span class="bg">{{t "Latest Posts" }}</span><span class="border"></span></h4>
         {{#get "posts" limit="3" include="tags" as |recent-articles| }}
             {{#foreach recent-articles visibility="all"}}
                 <article class="{{post_class}} item ctag-{{primary_tag.slug}} no-thumb">
